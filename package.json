@@ -1,0 +1,29 @@
+{
+  "name": "shengxiao",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:lan": "vite --host",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "preview:lan": "vite preview --host",
+    "check": "rolldown scripts/check.ts --file .check/check.mjs --platform node --log-level silent && node .check/check.mjs",
+    "sample": "rolldown scripts/sample.ts --file .check/sample.mjs --platform node --log-level silent && node .check/sample.mjs",
+    "icons": "node scripts/icons.mjs public",
+    "deploy": "sh scripts/deploy.sh"
+  },
+  "dependencies": {
+    "lunar-typescript": "^1.8.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}
